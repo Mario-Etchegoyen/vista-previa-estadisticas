@@ -128,14 +128,12 @@ span {
 }
 
 @media(max-width: 375px) {
-
-
   main {
     margin-left: auto;
     margin-right: auto;
     margin-top: 15dvh;
     width: 90dvw;
-    height: 120dvh;
+    height: 130dvh;
     min-width: 100px;
   }
 
@@ -145,10 +143,8 @@ span {
     align-items: center;
     border-radius: .75rem;
     width: 90dvw;
-    height: 120dvh;
+    height: 130dvh;
   }
-
-
 
   .img-1 {
     position: absolute;

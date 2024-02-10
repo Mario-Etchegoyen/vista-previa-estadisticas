@@ -14,6 +14,7 @@ body {
   color: hsl(0, 0%, 100%);
   font-family: Inter;
   font-size: .9375rem;
+  height: auto;
 }
 
 main {
@@ -30,7 +31,7 @@ main {
   border-top-left-radius: .75rem;
   border-bottom-left-radius: .75rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   justify-content: space-between;
   width: 80dvw;
   height: 70dvh;
@@ -62,12 +63,12 @@ p {
 
 .estadistica {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-flow: row wrap;
   width: 30dvw;
+  min-width: 150px;
   text-transform: uppercase;
   font-size: 0.94em;
-  margin-bottom: 500px;
 }
 
 .elementos {
@@ -77,18 +78,158 @@ p {
   width: 100px;
   font-size: 1.5rem;
   font-weight: bolder;
-  margin-bottom: 0.7dvw;
+  margin-bottom: 0.5dvw;
 }
 
 span {
   text-transform: lowercase;
 }
 
-img {
+.imagenes {
+  position: relative;
+  filter: saturate(170%);
+}
+
+.img-1 {
+  position: absolute;
+  left: -40dvw;
   width: 40dvw;
   min-width: 149px;
   height: 70dvh;
   border-top-right-radius: .75rem;
   border-bottom-right-radius: .75rem;
-  filter: opacity(40%);
+  z-index: 100;
+
+}
+
+.img-2 {
+  position: absolute;
+  left: -40dvw;
+  width: 40dvw;
+  min-width: 149px;
+  height: 70dvh;
+  border-top-right-radius: .75rem;
+  border-bottom-right-radius: .75rem;
+  z-index: 0;
+}
+
+.cubo-morado {
+  position: absolute;
+  background-color: rgba(170, 92, 219, 0.50);
+  width: 40dvw;
+  min-width: 149px;
+  height: 70dvh;
+  border-top-right-radius: .75rem;
+  border-bottom-right-radius: .75rem;
+  top: 0dvh;
+  left: -40dvw;
+  z-index: 200;
+
+}
+
+@media(max-width: 375px) {
+
+
+  main {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15dvh;
+    width: 90dvw;
+    height: 120dvh;
+    min-width: 100px;
+  }
+
+  .titulo-imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: .75rem;
+    width: 90dvw;
+    height: 120dvh;
+  }
+
+
+
+  .img-1 {
+    position: absolute;
+    width: 90dvw;
+    height: 40dvh;
+    border-top-left-radius: .75rem;
+    border-bottom-right-radius: 0;
+    top: 0dvh;
+    left: -45dvw;
+  }
+
+  .img-2 {
+    position: absolute;
+    width: 90dvw;
+    height: 40dvh;
+    border-top-left-radius: .75rem;
+    border-bottom-right-radius: 0;
+    top: 0dvh;
+    left: -45dvw;
+    z-index: 200;
+  }
+
+  .cubo-morado {
+    position: absolute;
+    background-color: rgba(170, 92, 219, 0.50);
+    width: 90dvw;
+    height: 40dvh;
+    border-top-left-radius: .75rem;
+    border-bottom-right-radius: 0;
+    top: 0dvh;
+    left: -45dvw;
+    z-index: 200;
+  }
+
+  .leyenda{
+    margin-top: 1dvh;
+  }
+
+  h1 {
+    width: 70dvw;
+    font-size: 7dvw;
+    text-align: center;
+  }
+
+  p {
+    width: 70dvw;
+    min-width: 150px;
+    font-size: 4dvw;
+    margin-bottom: 10dvw;
+    text-align: center;
+    line-height: 7dvw;
+  }
+
+  .estadistica {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    width: 70dvw;
+    height: 35dvh;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.6dvw;
+    font-weight: lighter;
+    color: hsla(0, 0%, 100%, 0.75);
+    letter-spacing: 0.5dvw;
+  }
+
+  .elementos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70dvw;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 2.5dvw;
+    color: hsl(0, 0%, 100%);
+    letter-spacing: normal;
+  }
+
+  span {
+    text-transform: lowercase;
+  }
+
 }
